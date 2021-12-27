@@ -1,0 +1,50 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #4481eb;
+}
+
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 10px;
+}
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+#gameScreen {
+  background-image: url("./img/background.png");
+}
+
+#ball {
+  display: none;
+}
+#brick {
+  display: none;
+}
+#queBrick {
+  display: none;
+}
+
+#question {
+  display: none;
+  border-radius: 10px;
+  width: 50vw;
+}
+#question .quize {
+  background-color: aliceblue;
+  padding: 5vw 5vw 1vw 5vw;
+}
+#question .quize .next {
+  text-align: center;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+.Que2 {
+  display: none;
+}
+.Que3 {
+  display: none;
+}

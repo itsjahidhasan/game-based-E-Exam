@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>Game Quiz</title>
+    <link
+      rel="icon"
+      href="../../asset/img/logo-website.svg"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background-color: #4481eb;
+      }
+
+      .border-gradient {
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 10px;
+      }
+      .border-gradient-purple {
+        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+      }
+      #gameScreen {
+        background-image: url("./img/background.png");
+      }
+
+      #ball {
+        display: none;
+      }
+      #brick {
+        display: none;
+      }
+      #queBrick {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game">
+      <img src="./img/ball.png" alt="" srcset="" id="ball" />
+      <img src="./img/brick.png" alt="" srcset="" id="brick" />
+      <img src="./img/queBrick.png" alt="" srcset="" id="queBrick" />
+      <div class="border">
+        <canvas
+          id="gameScreen"
+          class="border-gradient border-gradient-purple"
+          width="800"
+          height="600"
+        ></canvas>
+      </div>
+    </div>
+    <form action="" method="post">
+      <div id="question">
+        <div class="Que1 quize" id="Que1">
+          <h2>Question1: What is your name?</h2>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 2
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 3
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 4
+            </label>
+          </div>
+          <div class="next">
+            <input
+              type="button"
+              value="Next1"
+              class="btn btn-success"
+              onclick="question1()"
+            />
+          </div>
+        </div>
+
+        <div class="Que2 quize" id="Que2">
+          <h2>Question2: What is your name?</h2>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 2
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 3
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 4
+            </label>
+          </div>
+          <div class="next">
+            <input
+              type="button"
+              value="Next"
+              class="btn btn-success"
+              onclick="question2()"
+            />
+          </div>
+        </div>
+
+        <div class="Que3 quize" id="Que3">
+          <h2>Question3: What is your name?</h2>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 1
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 2
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 3
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Option 4
+            </label>
+          </div>
+          <div class="next">
+            <input type="button" value="Next3" class="btn btn-success" />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script type="module" src="./src/index.js"></script>
+    <script src="./src/question.js"></script>
+    <script></script>
+  </body>
+</html>
