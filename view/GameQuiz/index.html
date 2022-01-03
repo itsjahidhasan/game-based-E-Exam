@@ -17,6 +17,12 @@
       href="../../asset/img/logo-website.svg"
       type="image/x-icon"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/question.js"></script>
     <style>
       body {
         height: 100vh;
@@ -63,58 +69,31 @@
         ></canvas>
       </div>
     </div>
-    <form action="" method="post">
+    <form action="../../controller/test/submitTest.php" method="post">
       <div id="question">
         <div class="Que1 quize" id="Que1">
-          <h2>Question1: What is your name?</h2>
+          <h2>Q1: How many months do we have in a year??</h2>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 1
-            </label>
+            <input class="form-check-input" type="radio" name="Q1" />
+            <label class="form-check-label"> 16 </label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 2
-            </label>
+            <input class="form-check-input" type="radio" name="Q1" />
+            <label class="form-check-label"> 12 </label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 3
-            </label>
+            <input class="form-check-input" type="radio" name="Q1" />
+            <label class="form-check-label"> 6 </label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 4
-            </label>
+            <input class="form-check-input" type="radio" name="Q1" />
+            <label class="form-check-label"> 10 </label>
           </div>
           <div class="next">
             <input
               type="button"
-              value="Next1"
+              value="Next"
+              id="Next1"
               class="btn btn-success"
               onclick="question1()"
             />
@@ -122,55 +101,28 @@
         </div>
 
         <div class="Que2 quize" id="Que2">
-          <h2>Question2: What is your name?</h2>
+          <h2>Q2: How many days are there in a year?</h2>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 1
-            </label>
+            <input class="form-check-input" type="radio" name="Q2" />
+            <label class="form-check-label"> 330 </label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 2
-            </label>
+            <input class="form-check-input" type="radio" name="Q2" />
+            <label class="form-check-label"> 270 </label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 3
-            </label>
+            <input class="form-check-input" type="radio" name="Q2" />
+            <label class="form-check-label"> 367 </label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 4
-            </label>
+            <input class="form-check-input" type="radio" name="Q2" />
+            <label class="form-check-label"> 365 </label>
           </div>
           <div class="next">
             <input
               type="button"
               value="Next"
+              id="Next2"
               class="btn btn-success"
               onclick="question2()"
             />
@@ -178,63 +130,104 @@
         </div>
 
         <div class="Que3 quize" id="Que3">
-          <h2>Question3: What is your name?</h2>
+          <h2>Q3: How many letters are there in the English alphabet?</h2>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 1
-            </label>
+            <input class="form-check-input" type="radio" name="Q3" />
+            <label class="form-check-label"> 24 </label>
           </div>
 
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 2
-            </label>
+            <input class="form-check-input" type="radio" name="Q3" />
+            <label class="form-check-label"> 20 </label>
           </div>
 
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 3
-            </label>
+            <input class="form-check-input" type="radio" name="Q3" />
+            <label class="form-check-label"> 26 </label>
           </div>
 
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Option 4
-            </label>
+            <input class="form-check-input" type="radio" name="Q3" />
+            <label class="form-check-label"> 25 </label>
           </div>
           <div class="next">
-            <input type="button" value="Next3" class="btn btn-success" />
+            <input
+              type="submit"
+              value="Next3"
+              name="submit"
+              id="Next3"
+              class="btn btn-success"
+            />
           </div>
         </div>
       </div>
     </form>
 
     <script type="module" src="./src/index.js"></script>
-    <script src="./src/question.js"></script>
-    <script></script>
+
+    <script>
+      $(document).ready(function () {
+        var mouseClick1 = 0;
+        var keypress1 = 0;
+        var mouseClick2 = 0;
+        var keypress2 = 0;
+        var mouseClick3 = 0;
+        var keypress3 = 0;
+
+        // question1 interaction uploaded from here
+        $("#Que1").click(function () {
+          mouseClick1 += 1;
+        });
+        $("#Que1").keypress(function () {
+          keypress1 += 1;
+        });
+        $("#Next1").click(function () {
+          $.post(
+            "../../controller/interaction/interactionQ1.php",
+            {
+              mouseClick: mouseClick1,
+              keypress: keypress1,
+            },
+            function (data, status) {}
+          );
+        });
+
+        // question2 interaction uploaded from here
+        $("#Que2").click(function () {
+          mouseClick2 += 1;
+        });
+        $("#Que2").keypress(function () {
+          keypress2 += 1;
+        });
+        $("#Next2").click(function () {
+          $.post(
+            "../../controller/interaction/interactionQ2.php",
+            {
+              mouseClick: mouseClick2,
+              keypress: keypress2,
+            },
+            function (data, status) {}
+          );
+        });
+
+        // question3 interaction uploaded from here
+        $("#Que3").click(function () {
+          mouseClick3 += 1;
+        });
+        $("#Que3").keypress(function () {
+          keypress3 += 1;
+        });
+        $("#Next3").click(function () {
+          $.post(
+            "../../controller/interaction/interactionQ3.php",
+            {
+              mouseClick: mouseClick3,
+              keypress: keypress3,
+            },
+            function (data, status) {}
+          );
+        });
+      });
+    </script>
   </body>
 </html>

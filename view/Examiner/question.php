@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap Navbar with Logo Image</title>
+    <title>ExamCare | Set Question</title>
+    <link
+      rel="icon"
+      href="../../asset/img/logo-website.svg"
+      type="image/x-icon"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,7 +38,7 @@
             <div class="navbar-nav">
               <a href="./home.html" class="nav-item nav-link">Home</a>
               <a href="./profile.html" class="nav-item nav-link">Profile</a>
-              <a href="./question.html" class="nav-item nav-link active"
+              <a href="./question.php" class="nav-item nav-link active"
                 >Create Question</a
               >
             </div>
@@ -46,5 +51,9 @@
         </div>
       </nav>
     </div>
+    <div class="setQue">
+
+    </div>
+
   </body>
 </html>

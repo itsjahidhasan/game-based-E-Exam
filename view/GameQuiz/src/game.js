@@ -24,7 +24,7 @@ export default class Game{
     this.ball = new Ball(this);
     this.gameObjects = [];
     this.bricks = [];
-    this.lives = 3;
+    this.lives = 50;
     this.levels = [level1, level2];
     this.currentLevel = 0;
     this.currentLevelRewrite = 1;
@@ -76,8 +76,8 @@ export default class Game{
     ctx.font = "20px Arial";
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
-    ctx.fillText("Lives=", 300, 30);
-    ctx.fillText(this.lives, 350, 30);
+    // ctx.fillText("Lives=", 300, 30);
+    // ctx.fillText(this.lives, 350, 30);
     ctx.fillText("LEVEL=", 470, 30);
     ctx.fillText(this.currentLevelRewrite, 515, 30);
 

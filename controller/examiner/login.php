@@ -12,6 +12,8 @@ require_once('../../model/examinerModel.php');
         session_start();
 				$_SESSION['username'] = $username;
 				$_SESSION['password'] = $password;
+        $_SESSION['queTypeSelected'] = null;
+        
         header('location: ../../view/Examiner/home.html');
       }
       else{
