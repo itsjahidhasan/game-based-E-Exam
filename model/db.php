@@ -1,6 +1,6 @@
 <?php
 
-	$dbname = "";
+	$dbname = "ExamCare";
 	$dbuser = "root";
 	$dbpass = "";
 	$host	= "localhost";
