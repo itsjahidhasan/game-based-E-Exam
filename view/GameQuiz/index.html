@@ -76,19 +76,39 @@
             <div class="quize">
               <h2>Q1: How many months do we have in a year??</h2>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q1" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q1"
+                  id="Q1opt1"
+                />
                 <label class="form-check-label"> 16 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q1" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q1"
+                  id="Q1opt2"
+                />
                 <label class="form-check-label"> 12 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q1" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q1"
+                  id="Q1opt3"
+                />
                 <label class="form-check-label"> 6 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q1" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q1"
+                  id="Q1opt4"
+                />
                 <label class="form-check-label"> 10 </label>
               </div>
               <div class="next">
@@ -109,19 +129,39 @@
             <div class="quize">
               <h2>Q2: How many days are there in a year?</h2>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q2" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q2"
+                  id="Q2opt1"
+                />
                 <label class="form-check-label"> 330 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q2" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q2"
+                  id="Q2opt2"
+                />
                 <label class="form-check-label"> 270 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q2" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q2"
+                  id="Q2opt3"
+                />
                 <label class="form-check-label"> 367 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q2" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q2"
+                  id="Q2opt4"
+                />
                 <label class="form-check-label"> 365 </label>
               </div>
               <div class="next">
@@ -181,17 +221,38 @@
       $(document).ready(function () {
         var mouseClick1 = 0;
         var keypress1 = 0;
+        var opt1Change = 0;
+        var focusOut1 = 0;
         var mouseClick2 = 0;
         var keypress2 = 0;
+        var opt2Change = 0;
+        var focusOut2 = 0;
         var mouseClick3 = 0;
         var keypress3 = 0;
+        var opt3Change = 0;
+        var focusOut3 = 0;
 
         // question1 interaction uploaded from here
         $("#Que1").click(function () {
           mouseClick1 += 1;
         });
+        $("#Q1opt1").click(function () {
+          opt1Change += 1;
+        });
+        $("#Q1opt2").click(function () {
+          opt1Change += 1;
+        });
+        $("#Q1opt3").click(function () {
+          opt1Change += 1;
+        });
+        $("#Q1opt4").click(function () {
+          opt1Change += 1;
+        });
         $("#Que1").keypress(function () {
           keypress1 += 1;
+        });
+        $("#Que1").focusout(function () {
+          focusOut1 += 1;
         });
         $("#Next1").click(function () {
           $.post(
@@ -199,6 +260,8 @@
             {
               mouseClick: mouseClick1,
               keypress: keypress1,
+              optChange: opt1Change,
+              focusOut: focusOut1,
             },
             function (data, status) {}
           );
@@ -208,8 +271,23 @@
         $("#Que2").click(function () {
           mouseClick2 += 1;
         });
+        $("#Q2opt1").click(function () {
+          opt2Change += 1;
+        });
+        $("#Q2opt2").click(function () {
+          opt2Change += 1;
+        });
+        $("#Q2opt3").click(function () {
+          opt2Change += 1;
+        });
+        $("#Q2opt4").click(function () {
+          opt2Change += 1;
+        });
         $("#Que2").keypress(function () {
           keypress2 += 1;
+        });
+        $("#Que2").focusout(function () {
+          focusOut2 += 1;
         });
         $("#Next2").click(function () {
           $.post(
@@ -217,6 +295,8 @@
             {
               mouseClick: mouseClick2,
               keypress: keypress2,
+              optChange: opt2Change,
+              focusOut: focusOut2,
             },
             function (data, status) {}
           );
@@ -226,8 +306,23 @@
         $("#Que3").click(function () {
           mouseClick3 += 1;
         });
+        $("#Q3opt1").click(function () {
+          opt3Change += 1;
+        });
+        $("#Q3opt2").click(function () {
+          opt3Change += 1;
+        });
+        $("#Q3opt3").click(function () {
+          opt3Change += 1;
+        });
+        $("#Q3opt4").click(function () {
+          opt3Change += 1;
+        });
         $("#Que3").keypress(function () {
           keypress3 += 1;
+        });
+        $("#Que3").focusout(function () {
+          focusOut3 += 1;
         });
         $("#Next3").click(function () {
           $.post(
@@ -235,6 +330,8 @@
             {
               mouseClick: mouseClick3,
               keypress: keypress3,
+              optChange: opt3Change,
+              focusOut: focusOut3,
             },
             function (data, status) {}
           );

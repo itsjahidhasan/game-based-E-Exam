@@ -6,7 +6,12 @@ require_once('../../model/interactionModel.php');
   $studentId = $_SESSION['studentId'];
   $questionId = $_SESSION['queId'];
   $queNo = 1;
+  $optChange = $_POST['optChange'];
+  $focusOut = $_POST['focusOut'];
+
   $interactionData = [  
+    'focusOut' => $focusOut,
+    'optChange' => $optChange,
     'mouseClick'=>$mouseClick,
     'keypress'=> $keypress,
     'queNumber'=>$queNo, 

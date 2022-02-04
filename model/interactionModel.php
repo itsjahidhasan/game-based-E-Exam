@@ -2,7 +2,7 @@
   require_once('db.php');
   function interaction($interaction){
     $conn = getConnection();
-    $sql = "insert into interaction values('', '{$interaction['questionId']}', '{$interaction['studentId']}', '{$interaction['queNumber']}', '{$interaction['keypress']}', '{$interaction['mouseClick']}')";
+    $sql = "insert into interaction values('', '{$interaction['questionId']}', '{$interaction['studentId']}', '{$interaction['queNumber']}', '{$interaction['keypress']}', '{$interaction['mouseClick']}', '{$interaction['optChange']}', '{$interaction['focusOut']}')";
     
     
     
