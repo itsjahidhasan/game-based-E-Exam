@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   </head>
   <body>
     <div class="m-4">
@@ -51,5 +52,47 @@
         </div>
       </nav>
     </div>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1vw;
+      "
+    >
+      <canvas id="myChart" style="width: 100%; max-width: 800px"></canvas>
+    </div>
+
+    <script>
+      var xValues = [
+        "Mouse Click",
+        "Keyboard Click",
+        "Outside of Question tab",
+        "Option Changed",
+        "",
+      ];
+      var yValues = [5, 7, 2, 6, 0, 8];
+      var barColors = ["red", "green", "blue", "orange", "white"];
+
+      new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: "Students Interaction with Question paper",
+          },
+        },
+      });
+    </script>
   </body>
 </html>

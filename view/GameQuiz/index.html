@@ -182,30 +182,162 @@
             <div class="quize">
               <h2>Q3: How many letters are there in the English alphabet?</h2>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q3" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q3"
+                  id="Q3opt1"
+                />
                 <label class="form-check-label"> 24 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q3" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q3"
+                  id="Q3opt2"
+                />
                 <label class="form-check-label"> 20 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q3" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q3"
+                  id="Q3opt3"
+                  <div
+                  class="form-check"
+                />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q3"
+                  id="Q3opt4"
+                />
+                <label class="form-check-label"> 25 </label>
+              </div>
+              <div class="next">
+                <input
+                  type="button"
+                  value="Next"
+                  name="submit"
+                  id="Next3"
+                  class="btn btn-success"
+                  onclick="question3()"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Que4" id="Que4">
+          <div class="center">
+            <div class="quize">
+              <h2>Q4: How many letters are there in the English alphabet?</h2>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q4"
+                  id="Q4opt1"
+                />
+                <label class="form-check-label"> 24 </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q4"
+                  id="Q4opt2"
+                />
+                <label class="form-check-label"> 20 </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q4"
+                  id="Q4opt3"
+                />
                 <label class="form-check-label"> 26 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q3" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q4"
+                  id="Q4opt4"
+                />
+                <label class="form-check-label"> 25 </label>
+              </div>
+              <div class="next">
+                <input
+                  type="button"
+                  value="Next"
+                  name="submit"
+                  id="Next4"
+                  class="btn btn-success"
+                  onclick="question4()"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Que5" id="Que5">
+          <div class="center">
+            <div class="quize">
+              <h2>Q5: How many letters are there in the English alphabet?</h2>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q5"
+                  id="Q5opt1"
+                />
+                <label class="form-check-label"> 24 </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q5"
+                  id="Q5opt2"
+                />
+                <label class="form-check-label"> 20 </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q5"
+                  id="Q5opt3"
+                />
+                <label class="form-check-label"> 26 </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Q5"
+                  id="Q5opt4"
+                />
                 <label class="form-check-label"> 25 </label>
               </div>
               <div class="next">
                 <input
                   type="submit"
-                  value="Next3"
+                  value="Submit"
                   name="submit"
-                  id="Next3"
+                  id="Next5"
                   class="btn btn-success"
                 />
               </div>
@@ -231,6 +363,14 @@
         var keypress3 = 0;
         var opt3Change = 0;
         var focusOut3 = 0;
+        var mouseClick4 = 0;
+        var keypress4 = 0;
+        var opt4Change = 0;
+        var focusOut4 = 0;
+        var mouseClick5 = 0;
+        var keypress5 = 0;
+        var opt5Change = 0;
+        var focusOut5 = 0;
 
         // question1 interaction uploaded from here
         $("#Que1").click(function () {
@@ -332,6 +472,76 @@
               keypress: keypress3,
               optChange: opt3Change,
               focusOut: focusOut3,
+            },
+            function (data, status) {}
+          );
+        });
+
+        // question4 interaction uploaded from here
+        $("#Que4").click(function () {
+          mouseClick4 += 1;
+        });
+        $("#Q4opt1").click(function () {
+          opt4Change += 1;
+        });
+        $("#Q4opt2").click(function () {
+          opt4Change += 1;
+        });
+        $("#Q4opt3").click(function () {
+          opt4Change += 1;
+        });
+        $("#Q4opt4").click(function () {
+          opt4Change += 1;
+        });
+        $("#Que4").keypress(function () {
+          keypress4 += 1;
+        });
+        $("#Que4").focusout(function () {
+          focusOut4 += 1;
+        });
+        $("#Next4").click(function () {
+          $.post(
+            "../../controller/interaction/interactionQ2.php",
+            {
+              mouseClick: mouseClick4,
+              keypress: keypress4,
+              optChange: opt4Change,
+              focusOut: focusOut4,
+            },
+            function (data, status) {}
+          );
+        });
+
+        // question5 interaction uploaded from here
+        $("#Que5").click(function () {
+          mouseClick5 += 1;
+        });
+        $("#Q5opt1").click(function () {
+          opt5Change += 1;
+        });
+        $("#Q5opt2").click(function () {
+          opt5Change += 1;
+        });
+        $("#Q5opt3").click(function () {
+          opt5Change += 1;
+        });
+        $("#Q5opt4").click(function () {
+          opt5Change += 1;
+        });
+        $("#Que5").keypress(function () {
+          keypress5 += 1;
+        });
+        $("#Que5").focusout(function () {
+          focusOut5 += 1;
+        });
+        $("#Next5").click(function () {
+          $.post(
+            "../../controller/interaction/interactionQ3.php",
+            {
+              mouseClick: mouseClick5,
+              keypress: keypress5,
+              optChange: opt5Change,
+              focusOut: focusOut5,
             },
             function (data, status) {}
           );
