@@ -1,5 +1,5 @@
 <?php
-
+require_once('../../model/questionModel.php');
   if(isset( $_POST['submit'])){
     $queId = $_POST['queId'];
     $studentId = $_POST['studentId'];
@@ -8,9 +8,18 @@
     }
     else{
       session_start();
-      $_SESSION['queId'] = $queId;
-      $_SESSION['studentId'] = $studentId;
-      header('location: ../../view/GameQuiz/');
+      $flag = submissionCheck($queId,$studentId);
+
+      if ($flag==false){
+        $_SESSION['queId'] = $queId;
+        $_SESSION['studentId'] = $studentId;
+        header('location: ../../view/GameQuiz/');
+      }
+      else{
+        $_SESSION['error']='You have already submitted your answer';
+
+        echo $_SESSION['error'];
+      }
     }
 
   }

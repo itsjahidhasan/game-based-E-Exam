@@ -8,7 +8,7 @@ require_once('../../model/examinerModel.php');
     }
     else{
       $flag = login($username, $password);
-      if ( $flag = true ) {
+      if ( $flag == true ) {
         session_start();
 				$_SESSION['username'] = $username;
 				$_SESSION['password'] = $password;

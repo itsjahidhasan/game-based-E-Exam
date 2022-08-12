@@ -9,10 +9,10 @@ if(isset( $_POST['submit'])){
     echo "Empty submit";
   }
   else{
-    $registerData = [  
+    $registerData = [
       'username'=>$username,
       'email'=> $email,
-      'password'=>$password, 
+      'password'=>$password,
       'university'=> $university,
     ];
     $data = registration($registerData);
@@ -23,8 +23,7 @@ if(isset( $_POST['submit'])){
       echo "File didn't updated";
     }
 
-    
   }
-  
+
 }
 ?>
