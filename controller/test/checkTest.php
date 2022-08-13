@@ -11,9 +11,14 @@ require_once('../../model/questionModel.php');
       $flag = submissionCheck($queId,$studentId);
 
       if ($flag==false){
-        $_SESSION['queId'] = $queId;
-        $_SESSION['studentId'] = $studentId;
-        header('location: ../../view/GameQuiz/');
+        if(questionSetCheck($queId)){
+          $_SESSION['queId'] = $queId;
+          $_SESSION['studentId'] = $studentId;
+          header('location: ../../view/GameQuiz/');
+        }
+        else{
+          echo 'you have entered wrong Question ID';
+        }
       }
       else{
         $_SESSION['error']='You have already submitted your answer';
